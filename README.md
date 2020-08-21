@@ -236,7 +236,49 @@ $ export NODE='ip-192-168-31-160.ec2.internal'
 $ kubectl describe node $NODE
 ```
 
+The requests for CPU resources should be pretty low, which we can also view in the Kubernetes Dashboard. Let's uncomment the resources section in `deployment.yaml`, redeploy, and see what happens.
 
 
+### That Was Really Annoying... Enter Fargate
 
+AWS Fargate takes off the load of scaling and resource management. I'll walk through the AWS console to show how to set it up, then we'll scale up a deployment and watch what happens.
 
+1. Show how to set up a Fargate profile
+1. Deploy the `nginx` deployment into the `demo` namespace
+1. Watch it add a pod on a Fargate instance.
+1. Scale the deployment and watch the magic happen.
+
+Pros:
+- That was easy.
+- Don't have to worry about HPA or Cluster scaling. It's just works.
+- Don't have to worry about specifying resource requests or limits.
+
+Cons:
+- In my tests, Fargate did not scale nearly as fast as the HPA. This is a pretty big drawback.
+
+---
+
+## GitOps
+
+Before we can talk about GitOps, we need to quickly touch on [Helm](https://helm.sh/docs).
+
+### Helm
+
+[Helm](https://helm.sh/docs) is the package manager for Kubernetes. 
+
+Quick demo:
+```bash
+$ kubectl create ns mysql # create the mysql namespace
+$ kubens mysql # change default ns used by kubectl
+$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/ # Add the 'stable' repo
+$ helm install mysql stable/mysql # use helm to deploy a mysql container
+$ kubectl delete ns mysql # clean up
+```
+
+## GitOps
+
+Go to [this article](https://www.weave.works/technologies/gitops/) for an explanation of GitOps.
+
+Then go to the [EKS workshop](https://www.eksworkshop.com/intermediate/260_weave_flux/) site for a walkthrough of how to set up GitOps on a cluster.
+
+Follow this link to go to the [Flux repository](https://github.com/fluxcd/flux).
