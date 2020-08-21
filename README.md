@@ -256,7 +256,8 @@ Pros:
 Cons:
 - In my tests, Fargate did not scale nearly as fast as the HPA. This is a pretty big drawback.
 
----
+Lins:
+- [Fargate Pricing](https://aws.amazon.com/fargate/pricing/)
 
 ## Helm
 
@@ -287,7 +288,7 @@ mychart/
   templates/
 ```
 
-I'll walk through the [byubroadcasting/eks-gitops](https://github.com/byubroadcasting/eks-gitops) repository.
+I'll walk through the [byubroadcasting/eks-gitops](https://github.com/byubroadcasting/eks-gitops) repository, which has a working example.
 
 ## GitOps
 
@@ -295,7 +296,7 @@ Go to [this article](https://www.weave.works/technologies/gitops/) for an explan
 
 Then go to the [EKS workshop](https://www.eksworkshop.com/intermediate/260_weave_flux/) site for a walkthrough of how to set up GitOps on a cluster.
 
-Useful links:
+Links:
 - [Flux](https://github.com/fluxcd/flux)
 - [Helm operator](https://github.com/fluxcd/helm-operator)
 
