@@ -10,7 +10,7 @@ Aug 21, 2020
 ### New Products Announced
 - `cdk8s`: A new CDK for Kubernetes
   - Use common programming languages (like JavaScript) to define K8s objects through code. The code generates standard K8s YAML files.
-- AWS Controllers for Kubernetes (ACK)
+- [AWS Controllers for Kubernetes (ACK)](https://aws.github.io/aws-controllers-k8s/)
   - A set of K8s controllers and CRDs for AWS services that allow you to instantiate and use AWS resources directly within cluster. 
   - ACK is a viable alternative to CloudFormation. Allows you to manage AWS resources in one place.
   - See this [YouTube clip](https://www.youtube.com/watch?v=6TWIoGkWEIc&t=1903s).
