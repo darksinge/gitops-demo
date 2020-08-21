@@ -257,7 +257,7 @@ Pros:
 Cons:
 - In my tests, Fargate did not scale nearly as fast as the HPA. This is a pretty big drawback.
 
-Lins:
+Links:
 - [Fargate Pricing](https://aws.amazon.com/fargate/pricing/)
 
 ## Helm
