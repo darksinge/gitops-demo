@@ -153,15 +153,15 @@ According to [Wikipedia](https://en.wikipedia.org/wiki/Scalability#Horizontal_(S
 - **Horizontal Scaling or Scaling Out**: means adding more nodes (i.e., pods) to, or removing nodes from, a system (i.e., deployment).
 - **Vertical Scaling or Scaling Up**: means adding resources to, or removing resources from, a single node.
 
-#### Short Quiz
+#### Quiz!
 
-Q1: In the first demonstration, I generated extra load on the `accounts-api` deployment, which caused the number of pods to increase. Was that an example of horizontal or vertical scaling?
+**Q1**: In the first demonstration, I generated extra load on the `accounts-api` deployment, which caused the number of pods to increase. Was that an example of horizontal or vertical scaling?
 
 <details><summary>Click to see answer</summary>
 Horizontal. We increased the number of pods in the deployment.
 </details>
 
-Q2: In the second demonstration, we artifically scaled the number of pods causing the Cluster Autoscaler to add an extra worker node. Was that an example of horizontal or vertical scaling?
+**Q2**: In the second demonstration, we artifically scaled the number of pods causing the Cluster Autoscaler to add an extra worker node. Was that an example of horizontal or vertical scaling?
 
 <details><summary>Click to see answer</summary>
 Horizontal. The Cluster Autoscaler added more resources to the cluster so that the deployment could continue scaling horizontally, but the resources allocated for each individual pod remained the same.
