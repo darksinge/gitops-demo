@@ -258,11 +258,9 @@ Cons:
 
 ---
 
-## GitOps
+## Helm
 
-Before we can talk about GitOps, we need to quickly touch on [Helm](https://helm.sh/docs).
-
-### Helm
+Before we can talk about GitOps, we need to quickly touch on Helm.
 
 [Helm](https://helm.sh/docs) is the package manager for Kubernetes. 
 
@@ -275,7 +273,7 @@ $ helm install mysql stable/mysql # use helm to deploy a mysql container
 $ kubectl delete ns mysql # clean up
 ```
 
-## GitOps
+### What is GitOps
 
 Go to [this article](https://www.weave.works/technologies/gitops/) for an explanation of GitOps.
 
