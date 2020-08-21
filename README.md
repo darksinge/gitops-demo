@@ -252,6 +252,7 @@ Pros:
 - That was easy.
 - Don't have to worry about HPA or Cluster scaling. It's just works.
 - Don't have to worry about specifying resource requests or limits.
+- Don't have to worry about updating/patching software on EC2 instances.
 
 Cons:
 - In my tests, Fargate did not scale nearly as fast as the HPA. This is a pretty big drawback.
