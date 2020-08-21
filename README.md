@@ -273,10 +273,29 @@ $ helm install mysql stable/mysql # use helm to deploy a mysql container
 $ kubectl delete ns mysql # clean up
 ```
 
-### What is GitOps
+### Helm Charts
+
+From the [docs](https://helm.sh/docs/topics/charts/) on charts:
+> Helm uses a packaging format called charts. A chart is a collection of files that describe a related set of Kubernetes resources.
+
+So, a chart is a collection of files. The file structure for a chart looks like:
+```
+mychart/
+  Chart.yaml
+  values.yaml
+  charts/
+  templates/
+```
+
+I'll walk through the [byubroadcasting/eks-gitops](https://github.com/byubroadcasting/eks-gitops) repository.
+
+## GitOps
 
 Go to [this article](https://www.weave.works/technologies/gitops/) for an explanation of GitOps.
 
 Then go to the [EKS workshop](https://www.eksworkshop.com/intermediate/260_weave_flux/) site for a walkthrough of how to set up GitOps on a cluster.
 
-Follow this link to go to the [Flux repository](https://github.com/fluxcd/flux).
+Useful links:
+- [Flux](https://github.com/fluxcd/flux)
+- [Helm operator](https://github.com/fluxcd/helm-operator)
+
